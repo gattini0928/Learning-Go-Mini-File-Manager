@@ -15,13 +15,13 @@ func main() {
 	for {
 	fmt.Println("Bem-vindo ao organizador de arquivos")
 	codeFolder, txtFolder, imagesFolder := createDirectories()
-	fmt.Println("Pastas code, txt e images criadas!")
-	fmt.Println("1 - Mover arquivo(.go)")
-	fmt.Println("2 - Mover arquivo(.txt)")
-	fmt.Println("3 - Mover arquivo(.png, .jpeg, .jpg, .webp)")
-	fmt.Println("4 - Listar arquivos de uma pasta: (./code, ./txt, ./images)")
-	fmt.Println("5 - Deletar arquivo de uma pasta: (./code, ./txt, ./images)")
-	fmt.Println("6 - Sair do sistema")
+	fmt.Println("📁 Pastas code, txt e images criadas!")
+	fmt.Println("1 🗃️🔵 - Mover arquivo(.go)")
+	fmt.Println("2 🗃️📃 - Mover arquivo(.txt)")
+	fmt.Println("3 🗃️📷 - Mover arquivo(.png, .jpeg, .jpg, .webp)")
+	fmt.Println("4 🗃️🔎- Listar arquivos de uma pasta: (./code, ./txt, ./images)")
+	fmt.Println("5 🗃️❌- Deletar arquivo de uma pasta: (./code, ./txt, ./images)")
+	fmt.Println("6 👋- Sair do sistema")
 
 	input, _ := reader.ReadString('\n')
 	input = strings.TrimSpace(input)
@@ -33,7 +33,7 @@ func main() {
 
 	switch choice{
 	case 1:
-		fmt.Println("Insira o arquivo .go: ")
+		fmt.Println("🔵Insira o arquivo .go: ")
 		file, _ := reader.ReadString('\n')
 		file = strings.TrimSpace(file)
 
@@ -43,7 +43,7 @@ func main() {
 		}
 		fmt.Println(msg)
 	case 2 :
-		fmt.Println("Insira o arquivo .txt: ")
+		fmt.Println("📃Insira o arquivo .txt: ")
 		file, _ := reader.ReadString('\n')
 		file = strings.TrimSpace(file)
 
@@ -53,7 +53,7 @@ func main() {
 		}
 		fmt.Println(msg)
 	case 3:
-		fmt.Println("Insira o arquivo: ")
+		fmt.Println("📷 Insira o arquivo (.png, .webp, .jpg, .jpeg): ")
 		file, _ := reader.ReadString('\n')
 		file = strings.TrimSpace(file)
 
@@ -63,17 +63,17 @@ func main() {
 		}
 		fmt.Println(msg)
 	case 4:
-		fmt.Println("Insira o nome da pasta que deseja listar os arquivos: ")
+		fmt.Println("📁🔎Insira o nome da pasta que deseja listar os arquivos: ")
 		folder, _ := reader.ReadString('\n')
 		folder = strings.TrimSpace(folder)
 
 		listAllFiles(folder)
 	case 5:
-		fmt.Println("Insira o nome da pasta que deseja deletar o arquivo: ")
+		fmt.Println("📁 ❌Insira o nome da pasta que deseja deletar o arquivo: ")
 		folder, _ := reader.ReadString('\n')
 		folder = strings.TrimSpace(folder)
 
-		fmt.Println("Qual arquivo deseja deletar: ")
+		fmt.Println("📁 Qual arquivo deseja deletar: ")
 		file, _ := reader.ReadString('\n')
 		file = strings.TrimSpace(file)
 
